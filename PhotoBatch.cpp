@@ -1,6 +1,15 @@
 #include <iostream>
 #include <iomanip>
 #include <map>
+#include <algorithm>
+
+std::string ToLower(std::string str)
+{
+	std::transform(std::begin(str), std::end(str), std::begin(str),
+		[](unsigned char c) { return std::tolower(c); });
+
+	return str;
+}
 
 class ArgumentParser
 {
@@ -32,9 +41,9 @@ public:
 	{
 		if (argc > 1)
 		{
-			for (int i = 0; i < argc; i++)
+			for (int i = 0; i < argc; ++i)
 			{
-				std::string arg = argv[i];
+				std::string arg = ToLower(argv[i]);
 
 				if (arg.length() >= 3)
 				{

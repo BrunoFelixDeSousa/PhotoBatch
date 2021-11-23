@@ -30,7 +30,39 @@ public:
 
 	void Parse(int argc, char* argv[])
 	{
+		if (argc > 1)
+		{
+			for (int i = 0; i < argc; i++)
+			{
+				std::string arg = argv[i];
 
+				if (arg.length() >= 3)
+				{
+					// argumento tem que ter pelo menos 3 caracteres
+					// os "--" iniciais e pelo menos um terceiro caracter
+					if (arg[0] == '-' && arg[1] == '-')
+					{
+						// remover os "--" iniciais. ex: --rename
+						arg = arg.substr(2); // final rename
+
+						if (arg.find_first_of('=') != std::string::npos)
+						{
+							// isso é uma opção
+						}
+						else
+						{
+							// é uma flag
+							auto flagIt = m_Flags.find(arg);
+							if (flagIt != std::end(m_Flags))
+							{
+								//achamos uma flag registrada
+								flagIt->second = true;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 
 private:

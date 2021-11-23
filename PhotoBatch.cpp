@@ -19,7 +19,7 @@ public:
 		if (!flag.empty())
 		{
 			auto flagIt = m_Flags.find(flag);
-			if (flagIt != std::(end(m_Flags)
+			if (flagIt != std::end(m_Flags))
 			{
 				return flagIt->second;
 			}

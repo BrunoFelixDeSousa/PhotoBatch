@@ -10,6 +10,14 @@ void ArgumentParser::RegisterFlag(const std::string& flag)
 	}
 }
 
+void ArgumentParser::RegisterOption(const std::string& option)
+{
+	if (!option.empty())
+	{
+		m_Options[option] = "";
+	}
+}
+
 bool ArgumentParser::GetFlag(const std::string& flag)
 {
 
@@ -23,6 +31,21 @@ bool ArgumentParser::GetFlag(const std::string& flag)
 
 	}
 	return false;
+}
+
+const std::string ArgumentParser::GetOption(const std::string& option) const
+{
+	if (!option.empty())
+	{
+		auto optionIt = m_Options.find(option);
+		if (optionIt != std::end(m_Options))
+		{
+			return optionIt->second;
+		}
+	}
+
+	static std::string EmptyOption = "";
+	return EmptyOption;
 }
 
 void ArgumentParser::Parse(int argc, char* argv[])

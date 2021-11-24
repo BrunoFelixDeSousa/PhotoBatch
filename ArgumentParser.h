@@ -3,7 +3,7 @@
 #include <string>
 #include <iomanip>
 #include <map>
-#include <algorithm>
+
 
 /**
 * classe usada para ler os argumentos da linha de comando

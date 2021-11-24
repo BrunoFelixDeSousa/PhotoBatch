@@ -1,13 +1,6 @@
 #include "ArgumentParser.h"
+#include "Utils.h"
 
-
-std::string ToLower(std::string str)
-{
-	std::transform(std::begin(str), std::end(str), std::begin(str),
-		[](unsigned char c) { return std::tolower(c); });
-
-	return str;
-}
 
 void ArgumentParser::RegisterFlag(const std::string& flag)
 {
@@ -38,7 +31,7 @@ void ArgumentParser::Parse(int argc, char* argv[])
 	{
 		for (int i = 0; i < argc; ++i)
 		{
-			std::string arg = ToLower(argv[i]);
+			std::string arg = Utils::ToLower(argv[i]);
 
 			if (arg.length() >= 3)
 			{

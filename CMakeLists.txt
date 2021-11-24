@@ -11,4 +11,5 @@ project(PhotoBatch VERSION 1.0)
 add_executable(PhotoBatch
 	"PhotoBatch.cpp" 
 	"ArgumentParser.h" 
-	"ArgumentParser.cpp")
+	"ArgumentParser.cpp"
+)

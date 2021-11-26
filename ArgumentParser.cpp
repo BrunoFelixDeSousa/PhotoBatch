@@ -1,6 +1,6 @@
 #include "ArgumentParser.h"
 #include "Utils.h"
-
+using namespace std;
 
 void ArgumentParser::RegisterFlag(const std::string& flag)
 {

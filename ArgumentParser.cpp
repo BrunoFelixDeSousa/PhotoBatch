@@ -1,6 +1,5 @@
 #include "ArgumentParser.h"
 #include "Utils.h"
-using namespace std;
 
 void ArgumentParser::RegisterFlag(const std::string& flag)
 {
@@ -68,6 +67,19 @@ void ArgumentParser::Parse(int argc, char* argv[])
 					if (arg.find_first_of('=') != std::string::npos)
 					{
 						// isso é uma opção
+						const size_t equalSingPos = arg.find('=');
+						if (equalSingPos != std::string::npos)
+						{
+							std::string optionName = arg.substr(0, equalSingPos);
+							std::string optionValue = arg.substr(equalSingPos + 1);
+
+							auto optionIt = m_Options.find(optionName);
+							if (optionIt != std::end(m_Options))
+							{
+								// achamos uma opção registrada
+								optionIt->second = optionValue;
+							}
+						}
 					}
 					else
 					{

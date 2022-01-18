@@ -1,13 +1,13 @@
 #pragma once
 
 #include <string>
-//#include <iomanip>
+#include <iomanip>
 #include <map>
 
 
 /**
 * classe usada para ler os argumentos da linha de comando
-* 
+*
 * exemplo:
 *	ArgumentParser argParser;
 *	argParser.RegisterFlag("rename");

@@ -2,6 +2,9 @@
 0	727	6596823072440670	CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.obj	91db0f5bfcfc6227
 727	1119	6596823074361691	PhotoBatch.exe	5f645b83f3af39b3
 7	596	6596823071140684	CMakeFiles/PhotoBatch.dir/ArgumentParser.cpp.obj	a035c50f5c2df582
-1	102	6596861243136295	build.ninja	c9d589ac948cb1eb
+1	102	6641698437335248	build.ninja	c9d589ac948cb1eb
 0	14	0	clean	8c45b54705a541e8
 5	559	6596823070760678	CMakeFiles/PhotoBatch.dir/Utils.cpp.obj	8d1ec9f752e78aa0
+0	803	6641704360108944	CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.obj	91db0f5bfcfc6227
+3	823	6641704360325804	CMakeFiles/PhotoBatch.dir/ArgumentParser.cpp.obj	a035c50f5c2df582
+824	1477	6641704364587984	PhotoBatch.exe	5f645b83f3af39b3
